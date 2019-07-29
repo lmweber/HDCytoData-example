@@ -145,11 +145,12 @@ ggplot(d_plot, aes(x = dimension_x, y = dimension_y, color = population)) +
   scale_color_manual(values = colors) + 
   labs(x = "dimension x", y = "dimension y") + 
   theme_bw() + 
-  theme(aspect.ratio = 1)
+  theme(aspect.ratio = 1, 
+        legend.key.height = unit(4, "mm"))
 
 filename <- "HDCytoData_example.pdf"
 
-ggsave(file.path(dir_figures, filename), height = 4, width = 10)
+ggsave(file.path(dir_figures, filename), height = 3, width = 10)
 
 
 
